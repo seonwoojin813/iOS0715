@@ -1,0 +1,117 @@
+import UIKit
+/*
+var str = "Hello, playground"
+print(str)
+ */
+
+/*
+var 이름 = "선우진"
+print(이름)
+
+이름 = "이현빈"
+print(이름)
+
+//일기 전용 변수 만들기
+let age = 25
+//읽기 전용이므로 다른 값을 대입하면 에러
+//age = 52
+
+이름="김천식"
+이름 = "김천식" //연산자 좌우 공백은 맞추어 주어야 합니다.
+//print(이름)_print(이름) -- 이건 에러
+//한 줄에 명령문이 2개 이상일 때는 ;으로 구분
+print(이름); print(이름)
+ */
+
+//타입을 명시해서 변수를 생성
+//var age : Int = 26
+
+//swift 에서는 한 번 자료형이 결정되면 다른 자료형의 데이터는 대입이 안됩니다.
+//age = 26.9 이건 에러
+
+var n1 : Int = 26
+var n2 : Int32 = 27
+
+//var result = n1 + n2 -->이건 에러 똑같은 형태로 변환
+//swift 애소눈 데이터 연산을 할 때 동일한 자료형으로 만들어 주어야합니다.
+//Int32를 Int로 만들기
+var result = Int32(n1) + n2 //이거나 var result = n1 + Int(n2)
+print(result)
+
+/*
+//1.0 - 0.8 이 0.2가 아니다라고 나옴
+print((1.0-0.8) == 0.2)
+
+var v : Int = 1
+var sum : Int = 0
+for _ in 1...1000{
+    sum = sum + v
+}
+print(sum)
+
+//이건 1000이 나옴
+
+var v : Double = 0.1
+var sum : Double = 0.0
+for _ in 1...1000{
+    sum = sum + v
+}
+print(sum)
+ 
+ //이건 0.000111...
+ */
+/*
+//곱하기를 해서 소수 부분을 없앤 후 연산을 하고 나누기를 해서 결과를 생성
+print((10.0-8.0) == 2.0)
+var v : Double = 0.1 * 10.0
+var sum : Double = 0.0
+for _ in 1...1000{
+    sum = sum + v
+}
+print(sum / 10.0)
+*/
+
+/*
+for i in 1...100{
+    if i % 3 == 0 {
+     print("빨강")
+    }
+    if i % 3 == 1 {
+        print("파랑")
+    }
+    if i % 3 == 2{
+        print("하늘")
+    }
+    sleep(1)
+}
+*/
+/*
+var n3 : Int8 = 77
+var n4 : Int8 = 110
+
+//var r : Int8 = n3 + n4
+// +연산자를 사용하면 표현범위를 넘어서서 에러
+var r : Int8 = n3 &+ n4
+print(r)
+ */
+
+var year : Int = 2019
+//윤년인지 판별
+//4의 배수이고 100의 배수는 아닌 경우 또는 400이 배수인 경우
+//2019는 윤년이 아님
+
+var msg : String = (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) ? "윤년" : "윤년이 아님"
+print(msg)
+
+/*
+//?를 붙여서 변수를 선언하면 nil을 대입할 수 있습니다.
+//?와 !를 붙이지 않고 변수를 선언하면 nil을 대입할 수 없습니다.
+var x1 : Int? = nil
+var x2 : Int = 300
+
+var k = x1 ?? 100 //x1이 nil이면 100을 대입하고 그렇지 않으면 x1 대입
+print(k)
+
+k = x2 ?? 100 //x2는 nil이 아니므로 300이 대입
+print(k)
+*/
