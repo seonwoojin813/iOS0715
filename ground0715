@@ -1,0 +1,238 @@
+import UIKit
+
+/*
+for i in (1...10).reversed(){
+    print(i)
+}
+ */
+
+//var score : Int = 101
+
+/*
+//score가 60이상이면 합격 그렇지 않으면 불합격이라고 출력
+if score >= 60{
+    print("합격")
+}else{
+    print("불합격");
+}
+*/
+
+/*
+//90-100이면 수
+//80-89이면 우
+//70-79이면 미
+//60-69이면 양
+//0-59이면 가
+if score >= 90 && score <= 100{
+    print("수")
+}else if score >= 80 && score < 90{
+    print("우")
+}else if score >= 70 && score < 80{
+    print("미")
+}else if score >= 60 && score < 70{
+    print("양")
+}else if score >= 0 && score < 60{
+    print("가")
+}
+//else는 데이터 자체가 잘못된 경우를 처리하는 용도로 사용
+else{
+    print("잘못된 점수입니다.")
+}
+*/
+
+/*
+//하나의 정수를 판별해서
+//1이면 한국
+//2이면 미국
+//3이면 중국 이라고 출력하는 프로그램을 작성
+
+var nation : Int = 1
+
+if nation == 1{
+print("한국")
+}else if nation == 2{
+print("미국")
+}else if nation == 3{
+print("영국")
+}else{
+print("잘못된 국가 코드")
+}
+
+let Korea:Int = 1
+let USA:Int = 2
+let England:Int = 3
+
+switch nation{
+case Korea:
+print("한국")
+
+case USA:
+print("미국")
+
+case England:
+print("영국")
+
+default:
+print("잘못된 국가 코드")
+}
+*/
+
+/*
+//1부터 100까지의 홀수 의 합
+var sum : Int = 0
+var idx : Int = 1
+while idx <= 100{
+  sum = sum + idx
+  idx = idx + 2
+}
+print("합계:", sum)
+ */
+
+/*
+//repeat가 나오면 한번은 한다
+//repeat while로 되어있는것은 while로 바꿀수있자만 반대는 안됨
+//1부터 100까지의 홀수 의 합
+var sum : Int = 0
+var idx : Int = 1
+repeat{
+    sum = sum + idx
+    idx = idx + 2
+}while idx <= 100
+print("합계:", sum)
+ */
+
+/*
+var ar = [300, 200, 76, 240] //데이터의 순차적인 모임
+var tuple = (200, 300) //데이터의 순차적인 모임이 아님
+
+//in 뒤에 사용하는 것은 데이터의 순차적인 모임일 때만 가능
+for imsi in ar{
+   print(imsi)
+}
+*/
+
+/*
+var ar = [300, 200, 76, 240] //데이터의 순차적인 모임
+var tuple = (200, 300) //데이터의 순차적인 모임이 아님
+
+//in 뒤에 사용하는 것은 데이터의 순차적인 모임일 때만 가능
+for imsi in ar{
+    if imsi % 2 == 1{
+        break //홀수를 만나면 반복문 중단
+        //continue //홀수를 만나면 아래로 내려가지 말고 다음으로 진행 - 홀수를 만나면 출력하지 않음
+    }
+    print(imsi)
+}
+*/
+
+/*
+for i in 1...3{
+    for j in 100...103{
+        print(j)
+    }
+    print(i)
+}
+print("종료")
+ //100 101 102 103 1 100 101 102 103 2 100 101 102 103 3 종료 라고 나옴
+ */
+
+/*
+for i in 1...3{
+    for j in 100...103{
+        break
+        print(j)
+    }
+    print(i)
+}
+print("종료")
+//1 2 3 종료라고 나옴
+*/
+
+/*
+OUTER: for i in 1...3{
+    for j in 100...103{
+        break OUTER //OUTER이라는 이름을 가진 반복문을 종료
+        print(j)
+    }
+    print(i)
+}
+print("종료")
+//종료만 출력
+*/
+
+/*
+func div(){
+    var split :  Int = 10
+    var divide : Int = 5
+    print(split / divide)
+}
+
+
+div()
+//2라고 출력
+*/
+
+/*
+//guard를 사용할 때
+ 
+//만약 divide가 0이면
+func div(divide : Int){
+    let split :  Int = 10
+    //divide가 0이 아니면 블럭을 넘어가서 수행하고
+    //divide가 0이면 else 구문을 수행
+    //if와 반대구조로 만듭니다.
+    //guard 구문에서는 조건에 맞지 않으면 중단하라고 합니다.
+    guard divide != 0 else{
+    print("0으로 나눌 수는 없습니다.")
+        return
+    }
+    print(split / divide)
+}
+
+
+div(divide:10)
+div(divide:0)
+*/
+
+/*
+ //if로 쓸 때
+ 
+ //만약 divide가 0이면
+ func div(divide : Int){
+ let split :  Int = 10
+ //divide가 0이 아니면 블럭을 넘어가서 수행하고
+ //divide가 0이면 else 구문을 수행
+ //if와 반대구조로 만듭니다.
+ //guard 구문에서는 조건에 맞지 않으면 중단하라고 합니다.
+ if divide == 0{
+ print("0으로 나눌 수는 없습니다.")
+ return
+ }
+ print(split / divide)
+ }
+ 
+ 
+ div(divide:10)
+ div(divide:0)
+*/
+
+//만약 divide가 0이면
+func div(divide : Int){
+    let split :  Int = 10
+    //divide가 0이 아니면 블럭을 넘어가서 수행하고
+    //divide가 0이면 else 구문을 수행
+    //if와 반대구조로 만듭니다.
+    //guard 구문에서는 조건에 맞지 않으면 중단하라고 합니다.
+    
+    var x : String? = "WOW"
+    //guard 나 if 안에서 변수 생성이 가능
+    //대입되는 값이 nil이면 false로 간주
+    guard let y = x else{
+        print("0으로 나눌 수는 없습니다.")
+        return
+    }
+    print(split / divide)
+}
+
+div(divide:10)
+
